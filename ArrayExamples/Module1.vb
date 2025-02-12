@@ -8,8 +8,8 @@ Module Module1
     Sub Main()
 
         'MultiDimensionalArrays()
-        TestRandomness()
-
+        'TestRandomness()
+        SplittingStringsIntoArrays()
     End Sub
 
     Sub simplearrays()
@@ -87,6 +87,19 @@ Module Module1
         Return CInt(Math.Floor(temp)) 'min isn't included
         'Return CInt(Math.Ceiling(temp)) 'Always remember a function needs to return
     End Function
+
+    Sub SplittingStringsIntoArrays()
+
+        Dim lotsOfFruit As String = "grape, coconut, banana, dragonfruit, tomato, honeydew melon, lime, guava, mango, strawberry, pear,"
+        Dim fruits() As String
+
+        fruits = Split(lotsOfFruit, ",")
+
+        For Each fruit In fruits
+            Console.WriteLine(fruit)
+        Next
+
+    End Sub
 
 
 End Module
